@@ -1,0 +1,88 @@
+ /* test styles css */
+*{
+	margin: 0;
+	padding: 0;
+}
+:root{
+	--test1: red;
+	--test2: blue;
+}
+body{
+	display: flex;
+	justify-content: center;
+
+	background: var(--test2);
+}
+
+
+
+
+/* clock */
+.container-clock-2{
+	height: 200px;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #72bcd4;
+	border-radius: 20px;
+	transform: rotate(180deg);
+	box-shadow: inset 0px 0px 10px 2px #e8f4f8;
+	position: relative;
+}
+.clock-2{
+	position: absolute;
+	height: 80%;
+	width: 80%;
+	border: 2px solid #0068ff;
+	border-radius: 50%;
+	background: linear-gradient(155deg, #0057e6, #0068ff);
+	box-shadow: 0px 0px 20px 5px #e8f4f8, inset 0px 0px 10px 5px #e8f4f8;
+}
+.clock-2::before{
+	content: "";
+	position: absolute;
+	height: calc(50% - 10px);
+	top: 50%;
+	left: 50%;
+	border: 1px solid #fff;
+	transform-origin: 100% 0%;
+	animation: clock-2 60s infinite steps(60);
+}
+.clock-2::after{
+	content: "";
+	position: absolute;
+	height: calc(50% - 20px);
+	top: calc(50% - 1px);
+	left: calc(50% - 1px);
+	border: 2px solid #ff9700;
+	transform-origin: 100% 0%;
+	animation: clock-2 3600s infinite steps(60);
+}
+.hour{
+	position: absolute;
+	height: calc(50% - 30px);
+	top: calc(50% - 1px);
+	left: calc(50% - 1px);
+	border: 3px solid black;
+	transform-origin: 100% 0%;
+	animation: clock-2 43200s infinite steps(12);	
+}
+@keyframes clock-2{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
